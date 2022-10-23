@@ -42,9 +42,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "npm run build && aws s3 sync build/ s3://cl9salon.com && npm run invalidateCache",
-    "deployDev": "npm run build && aws s3 sync --delete build/ s3://cl9salon-dev",
-    "invalidateCache": "aws cloudfront create-invalidation --distribution-id E1K2KUQ36IZN20 --paths '/*'",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
